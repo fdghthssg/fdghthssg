@@ -1,0 +1,10 @@
+# Sun Java System Application Server CLASSPATH Constant 
+COMPILE_LCP=".:${LIB_DIR}/jms.jar" 
+COMPILE_LCP="${COMPILE_LCP}:${CDSLIB_DIR}/cdsapi.jar" 
+COMPILE_LCP="${COMPILE_LCP}:${CDSLIB_DIR}/foundation.jar" 
+EXEC_LCP=".:${LIB_DIR}/jms.jar" 
+EXEC_LCP="${EXEC_LCP}:${CDSLIB_DIR}/cdsapi.jar" 
+EXEC_LCP="${EXEC_LCP}:${CDSLIB_DIR}/foundation.jar" 
+EXEC_LCP="${EXEC_LCP}:${CDSLIB_DIR}/eventserviceclient.jar" 
+EXEC_LCP="${EXEC_LCP}:${LIB_DIR}/imq.jar" 
+EXEC_LCP="${EXEC_LCP}:${LIB_DIR}/fscontext.jar" 
