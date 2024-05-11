@@ -1,0 +1,13 @@
+/** 
+   * see BillingManager#contentDelete(BillingInfo) 
+   */ 
+  public void contentDelete(BillingInfo inBillingInfo) 
+      throws BillingException 
+  { 
+    if (DELETE_RESPONSE == EXCEPTION) 
+     throw new NullPointerException("Developer Null Pointer"); 
+ 
+    if (DELETE_RESPONSE == BILLING_EXCEPTION) 
+     throw new BillingException("Developer Billing Exception"); 
+  } 
+} 
