@@ -1,0 +1,4 @@
+public static final long SUBSCRIBER_PUSH_DOMAIN = "subscriber" 
+public static final long VENDING_PUSH_DOMAIN = "vending" 
+public static final long CATALOG_PUSH_DOMAIN = "catalog" 
+public static final long DEVELOPER_PUSH_DOMAIN = "developer" 
