@@ -1,0 +1,208 @@
+@-webkit-keyframes hit-18 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 320px;
+			    bottom: 20px;
+			    opacity: 0;
+			  }
+			}
+			@keyframes hit-18 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 320px;
+			    bottom: 20px;
+			    opacity: 0;
+			  }
+			}
+			@-webkit-keyframes hit-19 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 169px;
+			    bottom: 3px;
+			    opacity: 0;
+			  }
+			}
+			@keyframes hit-19 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 169px;
+			    bottom: 3px;
+			    opacity: 0;
+			  }
+			}
+			@-webkit-keyframes hit-20 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 469px;
+			    bottom: 87px;
+			    opacity: 0;
+			  }
+			}
+			@keyframes hit-20 {
+			  0% {
+			    left: 0px;
+			    bottom: 0px;
+			    opacity: 1;
+			  }
+			  60% {
+			    opacity: 1;
+			  }
+			  100% {
+			    left: 469px;
+			    bottom: 87px;
+			    opacity: 0;
+			  }
+			}
+			.game_inner__left .spaceBar.pressed {
+			  -webkit-animation: press 0.05s forwards;
+			          animation: press 0.05s forwards;
+			}
+			.game_inner__right {
+			  float: right;
+			  position: fixed;
+			  width: 720px;
+			  background: #160917;
+			  left: 0;
+			  right: 0;
+			  border-radius: 10px;
+			  border: 2px solid white;
+			  z-index: 999;
+			  top: 50%;
+			  box-shadow: 0 0 0 1160px #0a0209d1;
+			  margin: auto;
+			  transform: translateY(-50%);
+			}
+			.game_inner__right p {
+			  text-align: left;
+			  font-size: 10px;
+			  padding: 26px;
+			}
+			.game_inner__right .xp {
+			  padding: 0 26px;
+			  font-size: 12px;
+			}
+			.game_inner__right .nextPhase {
+			  background: #73256a;
+			  width: calc(100% - 52px);
+			  margin: 0 26px 26px 26px;
+			  text-align: center;
+			  font-size: 12px;
+			  padding: 20px 0;
+			  border-radius: 10px;
+			  cursor: pointer;
+			  box-shadow: 0 4px #3d074e;
+			}
+			.game_inner__right .upgrades {
+			  padding: 24px;
+			}
+			.game_inner__right .upgrades h2 {
+			  text-transform: capitalize;
+			  margin-bottom: 12px;
+			  font-weight: normal;
+			  font-size: 14px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade {
+			  border: 2px solid white;
+			  padding: 12px;
+			  border-radius: 6px;
+			  opacity: 0.6;
+			  transition: all 0.3s;
+			  pointer-events: none;
+			  position: relative;
+			  margin-bottom: 6px;
+			  font-size: 11px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade:hover {
+			  background: #ffffff0f;
+			  padding: 12px 12px 12px 20px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade.max {
+			  background: black;
+			  pointer-events: none;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade.max:after {
+			  content: "max";
+			  display: block;
+			  position: absolute;
+			  left: 0;
+			  right: 0;
+			  text-align: center;
+			  margin: auto;
+			  top: 50%;
+			  transform: translateY(-50%);
+			  width: 100%;
+			  text-transform: uppercase;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade.max div {
+			  opacity: 0.12;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade.bought {
+			  pointer-events: none !important;
+			  background: green;
+			  opacity: 0.2 !important;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade .name {
+			  font-size: 11px;
+			  margin-bottom: 5px;
+			  text-transform: uppercase;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade .description {
+			  font-size: 8px;
+			  opacity: 0.5;
+			  margin-bottom: 4px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade .cost {
+			  font-size: 8px;
+			  color: red;
+			  transition: all 0.3s;
+			  margin-bottom: 3px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade .level {
+			  font-size: 8px;
+			  position: absolute;
+			  right: 12px;
+			  bottom: 12px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade .effect {
+			  font-size: 8px;
+			}
+			.game_inner__right .upgrades_upgrade .upgrade.available {
+			  opacity: 1;
+			  pointer-events: all;
+			  cursor: pointer;
+			}
