@@ -1,0 +1,4 @@
+req.open("POST", "/transferFunds", true);  
+body = "to_account=Bill&amount=10000&token=" + token;  
+//token为与会话相关的一次性随机数。  
+req.send(body);  
