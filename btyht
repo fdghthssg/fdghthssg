@@ -1,0 +1,24 @@
+import { getUser, updateUser } from './api';
+
+// 获取用户
+getUser(1)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+// 更新用户
+const userData = {
+  name: 'John Doe',
+  age: 25,
+};
+
+updateUser1, userData)
+  .then((response) => {
+    console.log('User updated successfully');
+  })
+  .catch(() => {
+    console.error(error);
+  });
