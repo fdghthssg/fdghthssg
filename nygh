@@ -1,0 +1,5 @@
+uni({
+	viteLegacyOptions: {
+		targets: ['Chrome > 70']
+	   }
+	}),
