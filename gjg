@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>山西长治</title>
+		<link rel="stylesheet" type="text/css" href="css/boostrap.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<script src="/demos/googlegg.js"></script>
+		<div class="boo">
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+				<li class="active"><a href="scenery1.html">1</a></li>
+				<li class="active"><a href="scenery2.html">2</a></li>
+				<li class="active"><a href="food1.html">3</a></li>
+				<li class="active"><a href="food2.html">4</a></li>
+				<li class="active"><a href="culture1.html">5</a></li>
+				<li class="active"><a href="culture2.html">6</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		<div class="gallery-container">
+			<div class="Div"><b>神农定居地，长治久安城</b>
+				<table class="Table">
+					<tr class="m">
+						<td>姓名：张圆圆</td>
+						<td>班级：计算机1162</td>
+						<td>学号：1161301231</td>
+						<td>QQ号：1309482916</td>
+						<td>手机号：18800662027</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="gallery">
+			<div class="frame">
+				<img class="image" src="img/water.jpg">
+				<div class="info">通天峡</div>
+			</div>
+			<div class="frame">
+				<img class="image" src="img/snack.jpeg">
+				<div class="info"><a href="food1.html" target="_blank">唇齿留香</a></div>
+			</div>
+			<div class="frame">
+				<img class="image" src="img/view.jpeg">
+				<div class="info"><a href="scenery1.html" target="_blank">晋善晋美</a></div>
+			</div>
+			<div class="frame">
+				<img class="image" src="img/culture.jpeg">
+				<div class="info"><a href="culture1.html" target="_blank">文化传承</a></div>
+			</div>
+			<div class="frame">
+				<img class="image" src="img/moun.jpg">
+				<div class="info">天脊山</div>
+			</div>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
+</html>
+
+
