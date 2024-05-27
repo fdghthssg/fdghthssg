@@ -1,0 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using test_vs_api.Entities;
+​
+namespace test_vs_api.Data
+{
+    public class DataContext : DbContext
+    {
+        public DataContext(DbContextOptions<DataContext> options) : base(options) 
+        { 
+​
+        }
+​
+        public DbSet<数据库表名> 表名{  get; set; }
+    }
+}
