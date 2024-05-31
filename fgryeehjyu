@@ -1,0 +1,12 @@
+import fetchData from './fetchData'
+
+// 回调类型异步函数的测试
+test('fetchData 返回结果为 { success: true }', (done) => {
+  fetchData((data) => {
+    expect(data).toEqual({
+      success: true
+    })
+    // 只有当 done 函数被执行到才认为是测试用例执行结束
+    done();
+  })
+})
