@@ -1,0 +1,22 @@
+<?php  
+highlight_file(__FILE__);  
+function Kobe($cmd)  
+{  
+    if (strlen($cmd) > 13) {  
+        die("see you again~");  
+    }  
+    if (preg_match("/echo|exec|eval|system|fputs|\.|\/|\\|/i", $cmd)) {  
+        die("肘死你");  
+    }  
+    foreach ($_GET as $val_name => $val_val) {  
+        if (preg_match("/bin|mv|cp|ls|\||f|a|l|\?|\*|\>/i", $val_val)) {  
+            return "what can i say";  
+        }  
+    }  
+    return $cmd;  
+}  
+  
+$cmd = Kobe($_GET['cmd']);  
+echo "#man," . $cmd  . ",manba out";  
+echo "<br>";  
+eval("#man," . $cmd . ",mamba out");
