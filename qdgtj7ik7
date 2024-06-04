@@ -1,0 +1,19 @@
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+ 
+@WebFilter(urlPatterns = "/*")
+public class demo2 implements Filter {
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        //放行之前执行
+        System.out.println("demo2 拦截请求之前，可执行多次!!!!!");
+ 
+        //放行
+        filterChain.doFilter(servletRequest,servletResponse);
+ 
+        //放行之后执行
+        System.out.println("demo2 拦截请求之后，可执行多次!!!!!");
+    }
+ 
+}
