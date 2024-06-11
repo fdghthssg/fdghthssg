@@ -1,0 +1,31 @@
+
+				catch (SqlException e)
+				{
+					ErrorMessage=e.Message;
+					return null;
+				}
+ 
+				finally
+				{
+					Conn.Close();
+					Conn.Dispose();
+				}
+			}//sqlserver
+			if(DbServerType.ToLower()=="oracle")
+			{
+ 
+				OracleConnection Conn = new OracleConnection(strConn );
+				OracleCommand Cmd = new OracleCommand();
+ 
+				Cmd.Connection = Conn;
+ 
+				OracleDataReader myDr;
+				Cmd.CommandText =_sql;
+				if(paras!=null)
+				{
+					for(int i=0;i<paras.Count;i++)
+					{
+						Cmd.Parameters.Add((OracleParameter)paras[i]);
+					}
+				}
+ 
