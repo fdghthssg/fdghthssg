@@ -1,0 +1,9 @@
+public string getInnerHtml(Control ctl)
+{
+                string str = "";
+                for (int j = 0; j < ctl.Controls.Count; j++)
+                {
+                    str += getOuterHtml(ctl.Controls[j]);
+                }
+                return str;
+}
