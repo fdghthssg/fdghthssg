@@ -1,0 +1,45 @@
+using System;
+using System.Web;
+
+namespace CustomHttpModules
+{
+    public class HeaderFilterHttpModule : IHttpModule
+    {
+        public void Init(HttpApplication context)
+        {
+            context.PreSendRequestHeaders += OnPreSendRequestHeaders;
+        }
+
+        public void Dispose()
+        { }
+
+        void OnPreSendRequestHeaders(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpApplication app = sender as HttpApplication;
+                if (app != null && app.Context != null && app.Context.Response != null)
+                {
+                    var headers = app.Context.Response.Headers;
+                    if (headers != null)
+                    {
+                        headers.Remove("Server");
+                        headers.Remove("X-AspNet-Version");
+                        headers.Remove("X-AspNetMvc-Version");
+                        headers.Remove("X-Frame-Options");
+                        headers.Remove("X-Powered-By");
+                        // 添加CORS相关的头信息
+                        headers.Add("Access-Control-Allow-Origin", "*");
+                        headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+                        headers.Add("Access-Control-Allow-Headers", "Content-Type, Accept");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // 记录异常
+            }
+        }
+    }
+}
+
