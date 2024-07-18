@@ -1,0 +1,17 @@
+import requests
+ 
+def solve_captcha(image_url, api_key):
+    captcha_url = f'http://captcha-service.com/solve?url={image_url}&apiKey={api_key}'
+    response = requests.get(captcha_url)
+    if response.status_code == 200:
+        captcha_text = response.json().get('captcha_text')
+        return captcha_text
+    else:
+        return None
+ 
+# 调用示例
+captcha_text = solve_captcha('http://example.com/captcha.jpg', 'your_api_key')
+if captcha_text:
+    print(f"Solved captcha: {captcha_text}")
+else:
+    print("Failed to solve captcha.")
